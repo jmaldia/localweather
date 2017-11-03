@@ -1,0 +1,16 @@
+Tasks
+
+√ - Write the HTML to structure the page
+√ - Write the script to grab the quote from an array
+√ - Create button
+√ - When button is clicked
+	√ - get new quote using array
+	√ - display new quote
+√ - Add 
+	√ - Twitter, 
+	√ - Facebook, and 
+	√ - LinkedIn 
+	buttons. When clicked, the quote will be shared
+√ - Write CSS
+√ - Write the script to grab the quote from an API
+√ - Format the JSON object to display just the code
