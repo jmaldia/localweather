@@ -20,35 +20,40 @@
 </head>
   
 <body onload="">
+	<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+		<source src="http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4">
+	</video>
 
 	<!-- This will wrap the whole page content -->
 	<div class="wrapper">
 
 		<!-- Main image -->
 		<div class="main-img">
-			<img src="img/if_App_2638291.svg">
+			<img src="img/if_Dash_board_2638347.svg">
 		</div>
 
 		<!-- Page Header -->
 		<header>
-			<h3>Quotes to Inspire you</h3>
+			<h3>Ten Cadence Weather</h3>
 		</header>
 		
-		<!-- This is where the quote will display	 -->
-		<section id="quote">
+		<!-- This is where the weather will display	 -->
+		<section id="weather">
+			<p>The current temperature in <span>YOUR LOCATION</span> is</p>
+			<h1>74&deg;</h1>
 		</section>
 
 		<!-- This button will generate a new quote when pressed -->
 		<div id="buttons">
 			<button id="button-new-quote">
-				New Quote        
+				Convert to Fahrenheit        
 			</button>
 
-			<a id="tweet_btn" target = "_blank">
+			<!-- <a id="tweet_btn" target = "_blank">
 				<button>
 					Tweet
 				</button>
-			</a>
+			</a> -->
 
 			<!-- <button id="linkedin">
 				Share on Linkedin

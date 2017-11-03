@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#78ffd6), to(#57ade5)) fixed;
-    background: -moz-gradient(linear, left top, left bottom, from(#78ffd6), to(#57ade5)) fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#7f8c8d)) fixed;
+    background: -moz-gradient(linear, left top, left bottom, from(#bdc3c7), to(#7f8c8d)) fixed;
     text-align: center;
     color: #1E232D;
     font-family: 'Lato', Helvetica, sans-serif;
 }
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    opacity: .2;
+}
+
 
 .wrapper {
     max-width: 800px;
@@ -45,7 +62,7 @@ button {
     margin: 0 5px;
     padding: 10px 20px;
     font-size: 1em;
-    width: 150px;
+    /*width: 150px;*/
     border-radius: 3px;
 }
 
