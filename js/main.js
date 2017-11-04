@@ -1,29 +1,51 @@
 $(document).ready(function() {
+    
+    // temp = Math.floor(Math.random() * 100);
+    // $('#weather-vid').attr('src', 'http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4');
 
-    // This gets the random quote from forismatic on load 
-    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?").done(update).fail(handleErr);
+    // $('#weather-vid').attr('src', function() {
+    //     if (temp < 25) {
+    //       return 'http://jonmaldia.com/tenCadenceWeather/img/snowy.mp4';
+    //     } else if (temp < 50) {
+    //       return 'http://jonmaldia.com/tenCadenceWeather/img/cloudy.mp4';
+    //     } else if (temp < 75) {
+    //       return 'http://jonmaldia.com/tenCadenceWeather/img/rainy.mp4';
+    //     } else {
+    //       return 'http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4';
+    //     }
+    // });
+
+    // Get current position
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      // This gets the weather details
+      $.getJSON(`https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`).done(update).fail(handleErr);
+    });
 
     // This gets the random quote from forismatic on click (new quote button or tweet button)
-    $('#button-new-quote').click(function() {
-      $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?").done(update).fail(handleErr);
-    });
+    // $('#button-new-quote').click(function() {
+    //   $.getJSON("tempURL").done(update).fail(handleErr);
+    // });
 
     // Function to update the quotes on the tweet and on the page
     function update(response) {
-      var randomQuote = JSON.stringify(response.quoteText);
-      var randomQuoteAuthor = '';
-      
-      if (response.quoteAuthor) {
-        randomQuoteAuthor = JSON.stringify(response.quoteAuthor);
-      } else {
-        randomQuoteAuthor = "Anonymous";
+      var temp = JSON.stringify(response.main.temp);
+      var fahrenheit = Math.round((temp * 1.8) + 32);
+      var weather = 'http://jonmaldia.com/tenCadenceWeather/img/';
+
+      // Updates the page quote
+      $('#quote').html('<h1>' + fahrenheit + '&deg;</h1> <p>lat: ' + response.coord.lat + ' lon: ' + response.coord.lon + response.weather[0].main);
+
+      if (response.weather[0].main === 'Clear') {
+        weather += 'sunny.mp4';
       }
       
+      document.getElementById("#weather-vid").src = 'http://jonmaldia.com/tenCadenceWeather/img/snowy.mp4';
+      // $('#bg-vid').html(`<source id="weather-vid" src="${weather}">`);
       
-      // Updates the page quote
-      $('#quote').html('<section id="quote"><h1>' + randomQuote + '</section></h1><p id="author">' + randomQuoteAuthor + '</p>');
       // Updates the twitter URL with current quote
-      $('#tweet_btn').attr('href', 'https://twitter.com/intent/tweet?text=' + randomQuote + '&via=jonmaldia&url=http%3A%2F%2Fbit.ly%2Fjonquotes&hashtags=quotes%2Cinspiration' + "%0a-" + randomQuoteAuthor);
+      // $('#tweet_btn').attr('href', 'https://twitter.com/intent/tweet?text=' + randomQuote + '&via=jonmaldia&url=http%3A%2F%2Fbit.ly%2Fjonquotes&hashtags=quotes%2Cinspiration' + "%0a-" + randomQuoteAuthor);
     }
 
     // Error handler

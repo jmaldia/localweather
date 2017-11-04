@@ -16,12 +16,11 @@
 
 	  gtag('config', 'UA-109181346-1');
 	</script>
-
 </head>
   
 <body onload="">
-	<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-		<source src="http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4">
+	<video poster="http://jonmaldia.com/tenCadenceWeather/img/umbrellas.jpeg" id="bg-vid" playsinline autoplay muted loop>
+		<source id="weather-vid" src="http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4">
 	</video>
 
 	<!-- This will wrap the whole page content -->
@@ -38,9 +37,10 @@
 		</header>
 		
 		<!-- This is where the weather will display	 -->
-		<section id="weather">
+		<section>
 			<p>The current temperature in <span>YOUR LOCATION</span> is</p>
-			<h1>74&deg;</h1>
+			<div id="quote">
+			</div>
 		</section>
 
 		<!-- This button will generate a new quote when pressed -->
