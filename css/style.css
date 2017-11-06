@@ -6,6 +6,7 @@ body {
     text-align: center;
     color: #1E232D;
     font-family: 'Lato', Helvetica, sans-serif;
+    padding-bottom: 250px;
 }
 
 video { 
@@ -42,18 +43,37 @@ video {
     max-width: 75px;
 }
 
-#quote {
-    padding: 25px 25px 0 25px;
-    line-height: 3em;
+header {
+  padding: 0 0 50px 0;
+}
+
+
+#weather {
     color: #000;
 }
 
-#author {
-    padding: 25px 25px 35px 25px;
+#location h2 {
+  font-size: 5em;
+  margin: 0;
 }
 
-h1 {
-    font-size: 2em;
+#conditions {
+  padding: 20px;
+}
+#conditions h4 {
+  font-size: 1.5em;
+  margin: 0px;
+}
+
+#temperature {
+  color: #2980b9;
+  font-size: 8em;
+  margin: 40px;
+}
+
+#details {
+  font-size: 1.5em;
+  margin: 30px;
 }
 
 button {
