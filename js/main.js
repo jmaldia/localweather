@@ -43,19 +43,22 @@ $(document).ready(function() {
     $('#weather-vid').attr('src', function() {
       switch (response.weather[0].main) {
         case 'Snow':
-          return 'http://jonmaldia.com/tenCadenceWeather/img/snowy.mp4';
+          return 'http://jonmaldia.com/tencadenceweather/img/snowy.mp4';
           break;
         case 'Mist':
-          return 'http://jonmaldia.com/tenCadenceWeather/img/misty.mp4';
+          return 'http://jonmaldia.com/tencadenceweather/img/misty.mp4';
           break;
-          case 'Cloudy':
-          return 'http://jonmaldia.com/tenCadenceWeather/img/cloudy.mp4';
+        case 'Drizzle':
+          return 'http://jonmaldia.com/tencadenceweather/img/misty.mp4';
+          break;
+        case 'Cloudy':
+          return 'http://jonmaldia.com/tencadenceweather/img/cloudy.mp4';
           break;
         case 'Rain':
-          return 'http://jonmaldia.com/tenCadenceWeather/img/rainy.mp4';
+          return 'http://jonmaldia.com/tencadenceweather/img/rainy.mp4';
           break;
         default:
-          return 'http://jonmaldia.com/tenCadenceWeather/img/sunny.mp4';
+          return 'http://jonmaldia.com/tencadenceweather/img/sunny.mp4';
       }
     });   
     // Loads the video 
