@@ -15,6 +15,11 @@ Here are the requirements:
 9. When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
 10. You can get feedback on your project by sharing it with your friends on Facebook.
 
+### URLs
+
+https://jonmaldia.com/tencadenceweather/
+https://codepen.io/jonmaldia/pen/ZaWorY
+
 ### Features
 
 1. Gets weather based on your location
@@ -35,4 +40,4 @@ Here are the requirements:
 
 Coming soon
 
-![alt text](https://d1ax1i5f2y3x71.cloudfront.net/items/1y0L1v0H3r31072h1q01/Screen%20Recording%202017-11-06%20at%2007.58%20AM.gif?X-CloudApp-Visitor-Id=657003da7136d78ee538e43736e4d9fa&v=153da455 "Ten Cadence Weather Screenshot")
+![alt text](https://d1ax1i5f2y3x71.cloudfront.net/items/1U0x1r1u3i020F0Q1B1S/Image%202017-11-06%20at%208.02.20%20AM.png?X-CloudApp-Visitor-Id=657003da7136d78ee538e43736e4d9fa&v=d7eab32c "Ten Cadence Weather Screenshot")
