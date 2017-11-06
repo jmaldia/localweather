@@ -1,7 +1,7 @@
 Tasks
 
-- Write the HTML to structure the page
-- Write the script to get the weather
-- Write the script to get user's location
-- Write script to display icon
-- Write CSS
+√ - Write the HTML to structure the page
+√ - Write the script to get the weather
+√ - Write the script to get user's location
+√ - Write script to change background based on current conditions
+√ - Write CSS

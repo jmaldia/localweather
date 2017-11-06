@@ -15,6 +15,13 @@ Here are the requirements:
 9. When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
 10. You can get feedback on your project by sharing it with your friends on Facebook.
 
+### Features
+
+1. Gets weather based on your location
+2. Changes background based on current conditions
+3. Gives you High and Low temperature for the day
+4. Option to convert to Celsius/Fahrenheit with a button
+
 
 ### Technologies Used
 
@@ -28,4 +35,4 @@ Here are the requirements:
 
 Coming soon
 
-![alt text](https://d1ax1i5f2y3x71.cloudfront.net/items/1E2Y3v1u30182S0S3n0H/Image%202017-06-25%20at%207.25.25%20PM.png?X-CloudApp-Visitor-Id=657003da7136d78ee538e43736e4d9fa&v=51f5d6ac "Jon Maldia Portfolio Site Screenshot 1")
+![alt text](https://d1ax1i5f2y3x71.cloudfront.net/items/1y0L1v0H3r31072h1q01/Screen%20Recording%202017-11-06%20at%2007.58%20AM.gif?X-CloudApp-Visitor-Id=657003da7136d78ee538e43736e4d9fa&v=153da455 "Ten Cadence Weather Screenshot")
