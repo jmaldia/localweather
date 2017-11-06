@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Get current position
-  var currTemp = '';
+  var currTemp = 0;
   
   navigator.geolocation.getCurrentPosition(function(position) {
         var lat = position.coords.latitude;
@@ -11,37 +11,33 @@ $(document).ready(function() {
   // This gets the weather details
   weatherObj.done(update).fail(handleErr);
     
-  $('#button-convert').click(function() {
+  $('#buttons').click(function() {
       weatherObj.done(clickUpdate).fail(handleErr);
     });
       });
   
   function clickUpdate(response) {
-    var tempJSON = JSON.stringify(response.main.temp);
-    
-    alert(currTemp + '<=>' + Math.round(tempJSON));
-    
-    if (currTemp === Math.round(tempJSON)) {
-      currTemp = Math.round((tempJSON * 1.8) + 32);
-      $('#weather').html('<h1 id="temperature">' + currTemp + '&deg;</h1>');
-      $('#buttons').html('<button id="button-convert">Convert to Celsius        </button>');
-      $('#details').html('<p>H: ' + Math.round((response.main.temp_max * 1.8) + 32) + '&deg; | L: ' + Math.round((response.main.temp_min * 1.8) + 32) + '&deg;</p>');
-      alert(currTemp);
-    } else {
+    var tempJSON = response.main.temp;
+
+    if (currTemp === Math.round((tempJSON * 1.8) + 32)){
       currTemp = Math.round(tempJSON);
       $('#weather').html('<h1 id="temperature">' + currTemp + '&deg;</h1>');
-      $('#buttons').html('<button id="button-convert">Convert to Fahrenheit        </button>');
+      $('#buttons').html('<button id="button-convert">Convert to Fahrenheit</button>');
       $('#details').html('<p>H: ' + Math.round(response.main.temp_max) + '&deg; | L: ' + Math.round(response.main.temp_min) + '&deg;</p>');
-      alert(currTemp);
-    }
+    } else {
+      currTemp = Math.round((tempJSON * 1.8) + 32);
+      $('#weather').html('<h1 id="temperature">' + currTemp + '&deg;</h1>');
+      $('#buttons').html('<button id="button-convert">Convert to Celsius</button>');
+      $('#details').html('<p>H: ' + Math.round((response.main.temp_max * 1.8) + 32) + '&deg; | L: ' + Math.round((response.main.temp_min * 1.8) + 32) + '&deg;</p>');
+    } 
   }
   
   // Function to update the the weather
   function update(response) {
-    var temp = JSON.stringify(response.main.temp);
-    currTemp = Math.round((temp * 1.8) + 32);
+    var temp = response.main.temp;
     var high = Math.round((response.main.temp_max * 1.8) + 32);
     var low = Math.round((response.main.temp_min * 1.8) + 32);
+    currTemp = Math.round((temp * 1.8) + 32);
 
     // Update the background video based on the current conditions   
     $('#weather-vid').attr('src', function() {
