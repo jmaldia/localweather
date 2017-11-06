@@ -17,8 +17,8 @@ Here are the requirements:
 
 ### URLs
 
-https://jonmaldia.com/tencadenceweather/
-https://codepen.io/jonmaldia/pen/ZaWorY
+* https://jonmaldia.com/tencadenceweather/
+* https://codepen.io/jonmaldia/pen/ZaWorY
 
 ### Features
 
