@@ -38,8 +38,8 @@ $(document).ready(function() {
     var high = Math.round((response.main.temp_max * 1.8) + 32);
     var low = Math.round((response.main.temp_min * 1.8) + 32);
     currTemp = Math.round((temp * 1.8) + 32);
-
-    // Update the background video based on the current conditions   
+    // Update the background video based on the current conditions 
+    
     $('#weather-vid').attr('src', function() {
       switch (response.weather[0].main) {
         case 'Snow':
@@ -51,7 +51,7 @@ $(document).ready(function() {
         case 'Drizzle':
           return 'http://jonmaldia.com/tencadenceweather/img/misty.mp4';
           break;
-        case 'Cloudy':
+        case 'Clouds':
           return 'http://jonmaldia.com/tencadenceweather/img/cloudy.mp4';
           break;
         case 'Rain':
